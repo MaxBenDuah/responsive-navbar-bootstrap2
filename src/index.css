@@ -1,0 +1,19 @@
+body {
+  background-color: teal;
+}
+
+.imgLogo {
+  width: 100px;
+}
+
+.search-icon,
+.cart-icon {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .search-icon,
+  .cart-icon {
+    display: block;
+  }
+}

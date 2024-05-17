@@ -7,13 +7,15 @@ body {
 }
 
 .search-icon,
-.cart-icon {
+.cart-icon,
+.dropdown-menu-items {
   display: none;
 }
 
 @media (max-width: 992px) {
   .search-icon,
-  .cart-icon {
+  .cart-icon,
+  .dropdown-menu-items {
     display: block;
   }
 }

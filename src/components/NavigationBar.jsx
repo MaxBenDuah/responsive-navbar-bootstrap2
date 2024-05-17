@@ -22,14 +22,6 @@ function NavigationBar() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mx-auto">
-              <div className="d-flex justify-content-between">
-                <Nav.Link className="search-icon" href="#home">
-                  <MagnifyingGlass size={24} />
-                </Nav.Link>
-                <Nav.Link className="cart-icon" href="#home">
-                  <ShoppingCart size={24} />
-                </Nav.Link>
-              </div>
               <Nav.Link href="#home">Home</Nav.Link>
               <Nav.Link href="#about">About</Nav.Link>
               <Nav.Link href="#category">Category</Nav.Link>
@@ -41,7 +33,11 @@ function NavigationBar() {
               <Nav.Link className="d-none d-lg-block" href="#memes">
                 <ShoppingCart size={24} />
               </Nav.Link>
-              <NavDropdown title="Ozias Asante" id="collapsible-nav-dropdown">
+              <NavDropdown
+                title="Ozias Asante"
+                id="collapsible-nav-dropdown"
+                className="d-none d-lg-block"
+              >
                 <NavDropdown.Item href="#action/3.2">Profile</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">Orders</NavDropdown.Item>
                 <NavDropdown.Divider />
@@ -51,6 +47,26 @@ function NavigationBar() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+
+      {/* Navbar outside */}
+      <Container className="d-flex justify-content-between text-white border-bottom">
+        <Nav.Link className="search-icon" href="#home">
+          <MagnifyingGlass size={24} />
+        </Nav.Link>
+        <Nav.Link className="cart-icon" href="#home">
+          <ShoppingCart size={24} />
+        </Nav.Link>
+        <NavDropdown
+          title="Ozias Asante"
+          id="collapsible-nav-dropdown"
+          className="dropdown-menu-items"
+        >
+          <NavDropdown.Item href="#action/3.2">Profile</NavDropdown.Item>
+          <NavDropdown.Item href="#action/3.3">Orders</NavDropdown.Item>
+          <NavDropdown.Divider />
+          <NavDropdown.Item href="#action/3.4">Logout</NavDropdown.Item>
+        </NavDropdown>
+      </Container>
     </div>
   );
 }
